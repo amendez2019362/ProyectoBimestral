@@ -1,22 +1,18 @@
 import mongoose from 'mongoose';
 
-const UserSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, "El nombre es obligatorio"],
-    },
-    lastName: {
-        type: String,
-        required: [true, "El nombre es obligatorio"],
+        required: [true, "This parameter is required"],
     },
     email: {
         type: String,
-        required: [true, "El correo es obligarorio"],
+        required: [true, "This parameter is required"],
         unique: true,
     },
     password: {
         type: String,
-        required: [true, "La contraseña es obligaroria"],
+        required: [true, "The password is required"],
     },
     role: {
         type: String,
@@ -29,10 +25,10 @@ const UserSchema = mongoose.Schema({
     },
 });
 
-UserSchema.methods.toJSON = function(){
-    const { __v, password, _id, ...usuario} = this.toObject();
-    usuario.uid = _id;
-    return usuario;
+userSchema.methods.toJSON = function(){
+    const { __v, password, _id, ...user} = this.toObject();
+    user.uid = _id;
+    return user;
 }
 
-export default mongoose.model('User', UserSchema);
+export default mongoose.model('User', userSchema);

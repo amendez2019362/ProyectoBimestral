@@ -1,60 +1,56 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { usersGet, usersPost, getUserById, usersPut, usersDelete } from "./user.controller.js";
-import { existsEmail, esRoleValido, existsUserById } from "../helpers/db-validator.js";
+import { userGet, userPost, getUserById, userPut, userDelete } from "./user.controller.js";
+import { existEmail, validRole, existUserById } from "../helpers/db-validator.js";
 import { validateFields, validateRol } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
 const router = Router();
 
-router.get("/", usersGet);
+router.get("/", userGet);
 
 router.get(
     "/:id",
     [
-        check("id", "No es un ID válido").isMongoId(),
-        check("id").custom(existsUserById),
+        check("id", "Invalid id").isMongoId(),
+        check("id").custom(existUserById),
         validateFields,
-    ],
-    getUserById
+    ], getUserById
 );
 
 router.post(
     "/",
     [
-        check("name", "El nombre es obligatorio").not().isEmpty(),
-        check("password", "El password debe ser mayor a 6 caracteres").isLength({ min: 6 }),
-        check("email", "Este no es un correo válido").isEmail(),
-        check("email").custom(existsEmail),
+        check("name", "The name is required").not().isEmpty(),
+        check("password", "The password must be greater than 6 characters").isLength({ min: 6 }),
+        check("email", "The email is not valid").isEmail(),
+        check("email").custom(existEmail),
         validateFields,
-    ],
-    usersPost
+    ], userPost
 );
 
 router.put(
     "/:id",
     [
         validateJWT,
-        check("id", "No es un ID válido").isMongoId(),
-        check("id").custom(existsUserById),
-        check("password", "El password debe ser mayor a 6 caracteres").isLength({ min: 6 }),
-        check("role").custom(esRoleValido),
+        check("id", "Invalid id").isMongoId(),
+        check("id").custom(existUserById),
+        check("password", "The password must be greater than 6 characters").isLength({ min: 6 }),
+        check("role").custom(validRole),
         validateRol,
         validateFields,
-    ],
-    usersPut
+    ], userPut
 );
 
 router.delete(
     "/:id",
     [
         validateJWT,
-        check("id", "No es un ID válido").isMongoId(),
-        check("id").custom(existsUserById),
+        check("id", "Invalid id").isMongoId(),
+        check("id").custom(existUserById),
         validateRol,
         validateFields,
-    ],
-    usersDelete
+    ], userDelete
 );
 
 export default router;
