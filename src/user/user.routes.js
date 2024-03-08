@@ -37,9 +37,7 @@ router.put(
         validateJWT,
         check("id", "No es un ID válido").isMongoId(),
         check("id").custom(existsUserById),
-        check("password", "El password debe ser mayor a 6 caracteres").isLength({
-            min: 6,
-        }),
+        check("password", "El password debe ser mayor a 6 caracteres").isLength({ min: 6 }),
         check("role").custom(esRoleValido),
         validateRol,
         validateFields,
