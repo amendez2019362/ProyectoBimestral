@@ -2,12 +2,14 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { userGet, userPost, getUserById, userPut, userDelete } from "./user.controller.js";
 import { existEmail, validRole, existUserById } from "../helpers/db-validator.js";
-import { validateFields, validateRol } from "../middlewares/validate-fields.js";
+import { validateFields, validateRol, valDeleteUser } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
 const router = Router();
 
-router.get("/", userGet);
+router.get("/",
+    userGet
+);
 
 router.get(
     "/:id",
@@ -48,7 +50,9 @@ router.delete(
         validateJWT,
         check("id", "Invalid id").isMongoId(),
         check("id").custom(existUserById),
+  
         validateRol,
+        valDeleteUser,
         validateFields,
     ], userDelete
 );

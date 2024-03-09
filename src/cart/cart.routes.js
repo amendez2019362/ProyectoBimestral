@@ -15,7 +15,7 @@ router.get(
     "/:id",
     [
         validateJWT,
-        check("id", "Not a valid ID").isMongoId(),
+        check("id", "Is not valid").isMongoId(),
         check("id").custom(existCartById),
         validateRol,
         validateFields,
@@ -36,7 +36,7 @@ router.post(
 router.put(
     "/:id",
     [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "Is not valid").isMongoId(),
         check("id").custom(existCartById),
         validateFields,
     ], cartPut
@@ -45,7 +45,7 @@ router.put(
 router.delete(
     "/:id",
     [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "Is not valid").isMongoId(),
         check("id").custom(existCartById),
         validateFields,
     ], cartDelete

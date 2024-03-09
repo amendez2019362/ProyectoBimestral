@@ -62,3 +62,38 @@ export const valCategory = async (req, res, next) => {
         res.status(500).json({ error: 'Internal Server Error' });
     };
 }
+
+export const valDeleteUser = async (req, res, next) => {
+    
+    const { id } = req.params;
+    const { password } = req.body;
+
+    try {
+
+        const user = await User.findById(id);
+
+        if (!user) {
+            return res.status(404).json({ 
+                error: "User not found" 
+            });
+        }
+
+        console.log("this password was received:", password);
+        console.log("this password was stored:", user.password);
+
+        const validPasswordUser = await bcryptjs.compare(password, user.password);
+
+        if (!validPasswordUser) {
+            return res.status(401).json({
+                error: "Invalid password" 
+            });
+        }
+
+        next();
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ 
+            error: 'Internal Server Error' 
+        });
+    }
+};

@@ -28,64 +28,64 @@ export const newCart = async (req, res) => {
 
         const userFromToken = req.user;
         if (userId !== userFromToken._id.toString()) {
-            return res.status(401).json({
-                error: "You need an authorization. You can only add products to the cart"
+            return res.status(401).json({ 
+                error: "Unauthorized. You can only add products to your own cart." 
             });
         }
 
         const user = await User.findById(userId);
         if (!user) {
-            return res.status(404).json({
-                error: "User not found"
+            return res.status(404).json({ 
+                error: "User not found" 
             });
         }
 
         const product = await Product.findById(productId);
         if (!product) {
-            return res.status(404).json({
-                error: "Product not found"
+            return res.status(404).json({ 
+                error: "Product not found" 
             });
         }
 
         if (product.quantityStock < quantity) {
-            return res.status(400).json({
-                error: "Insufficient stock"
+            return res.status(400).json({ 
+                error: "Insufficient stock" 
             });
         }
 
         let cart = await Cart.findOne({ user: userId });
         if (!cart) {
-            cart = new Cart({
-                user: userId,
-                items: []
+            cart = new Cart({ user: userId, 
+                items: [], 
+                totalPrice: 0 
             });
         }
 
         const existingItemIndex = cart.items.findIndex(item => item.product.equals(productId));
 
+
         if (existingItemIndex !== -1) {
 
             cart.items[existingItemIndex].quantity += quantity;
-
         } else {
-            cart.items.push({
-                product: productId,
-                quantity
-            });
+            
+            cart.items.push({ product: productId, quantity });
         }
 
-        cart.totalPrice += product.price * quantity;
+        const totalPrice = product.price * quantity;
+
+        cart.totalPrice += totalPrice;
 
         await cart.save();
 
-        res.status(200).json({
-            message: "Product added to cart"
+        res.status(200).json({ 
+            message: "Product added to cart successfully" 
         });
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            error: "Internal Server Error"
+        res.status(500).json({ 
+            error: "Internal Server Error" 
         });
     }
 };
