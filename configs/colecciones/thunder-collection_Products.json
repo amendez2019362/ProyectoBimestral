@@ -1,0 +1,176 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Products",
+    "dateExported": "2024-03-09T06:27:50.442Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bfd8c017-daff-40b8-820d-449052a53dce",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productPost",
+            "url": "http://localhost:3000/ventas/v1/product",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-03-08T17:35:13.863Z",
+            "modified": "2024-03-09T06:18:28.533Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"coca\",\n  \"price\": 150,\n  \"stock\": 44,\n  \"quantitySold\": 4,\n  \"category\": \"65ebc91321b2f2023f8dc8b3\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "3bb1e995-762e-4fbf-b366-3c05fc6e01ea",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productGet",
+            "url": "http://localhost:3000/ventas/v1/product",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-08T17:30:34.654Z",
+            "modified": "2024-03-09T06:03:22.215Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NjQxNzUsImV4cCI6MTcwOTk2Nzc3NX0.q1sP4gPeMslouRx0ccwti9FfY8Lrtr64uHx_bWLurF0"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "dae59865-0ae0-4daa-b462-49d3ed8f26ce",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productPut",
+            "url": "http://localhost:3000/ventas/v1/product/65ebc63a1d49787c8e426784",
+            "method": "PUT",
+            "sortNum": 22500,
+            "created": "2024-03-08T17:37:30.875Z",
+            "modified": "2024-03-09T02:16:19.576Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Pan\",\n  \"price\": 2.20,\n  \"stock\": 0,\n  \"quantitySold\": 10,\n  \"category\": \"65ebc5371d49787c8e426769\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "30ae1cac-657f-4b74-bce5-155f5eb594f0",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productDelete",
+            "url": "http://localhost:3000/ventas/v1/product/65ebc62b1d49787c8e426781",
+            "method": "DELETE",
+            "sortNum": 25000,
+            "created": "2024-03-08T23:43:50.699Z",
+            "modified": "2024-03-09T02:17:21.795Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "4f4509e2-9b53-4aa2-ad7f-e3a0fe56b70a",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productoPorStock",
+            "url": "http://localhost:3000/ventas/v1/product/productOutOfStock",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-08T23:38:10.347Z",
+            "modified": "2024-03-09T02:25:55.178Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTEwMDIsImV4cCI6MTcwOTk1NDYwMn0.PTnF4j-wM9F-LyKiyTBVRWLY5ItV9-gqU6Y2PzOqa1w"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "cfb22813-7cd0-4d32-8464-ac3b507a7b36",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productgetMaxSaleProduct",
+            "url": "http://localhost:3000/ventas/v1/product/bestSellingProduct",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-09T01:13:58.473Z",
+            "modified": "2024-03-09T02:26:12.510Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "288be5a9-e510-43ae-947a-154b61e20094",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productSearchName",
+            "url": "http://localhost:3000/ventas/v1/product/searchProductName/fi",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-09T01:35:00.230Z",
+            "modified": "2024-03-09T02:33:45.350Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NDY5NTQsImV4cCI6MTcwOTk1MDU1NH0.2PDDVCVq6TVMO1hCv1ONtE8JPGblGqbb5VZxmZgIIZ4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d90cfec9-be9a-409b-a5fd-7f144c3f1ec6",
+            "colId": "570bc3c1-d7a0-4a7b-b501-21b7a18bf8bc",
+            "containerId": "",
+            "name": "productSearchCategory",
+            "url": "http://localhost:3000/ventas/v1/product//searchProductCategory/65ebcd86118f716b0910bc71",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-09T01:50:24.887Z",
+            "modified": "2024-03-09T02:47:36.002Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NDk1NDUsImV4cCI6MTcwOTk1MzE0NX0.uHUi84SXrg1hgi_h9xiENzdpSD9RYLOhI8n9xIHgdYA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

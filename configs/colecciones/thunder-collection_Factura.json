@@ -1,0 +1,33 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Factura",
+    "dateExported": "2024-03-09T06:28:02.319Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c92c687f-8174-4271-aa3f-55da7a572358",
+            "colId": "7224c7ba-de0d-46d3-826c-1d6fbcbea335",
+            "containerId": "",
+            "name": "facturaPut",
+            "url": "http://localhost:3000/ventas/v1/factura/65ebfc8a71b2c168aa6a10f9",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-03-09T06:20:51.224Z",
+            "modified": "2024-03-09T06:22:25.498Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NjUyODUsImV4cCI6MTcwOTk2ODg4NX0.BkWBuWCHG3ELHBUZfILxP92k-z6V4HUpYhT3EGxKxio"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"items\": [\n    {\n      \"product\": \"65ebc5c61d49787c8e426778\",\n      \"quantity\": 2\n    },\n    {\n      \"product\": \"65ebc92e21b2f2023f8dc8b9\",\n      \"quantity\": 2\n    }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

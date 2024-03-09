@@ -1,0 +1,94 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Category",
+    "dateExported": "2024-03-09T06:27:46.172Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ce25a89f-3742-44c2-ac2f-5181ac076de2",
+            "colId": "29513284-6ee6-4427-8bde-64578617b3f3",
+            "containerId": "",
+            "name": "categoryGet",
+            "url": "http://localhost:3000/ventas/v1/category",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-08T14:38:27.830Z",
+            "modified": "2024-03-08T14:44:36.242Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "2a7e5e74-b4e0-475f-96bc-e36b347aa98f",
+            "colId": "29513284-6ee6-4427-8bde-64578617b3f3",
+            "containerId": "",
+            "name": "categoryPost",
+            "url": "http://localhost:3000/ventas/v1/category",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-08T14:45:23.107Z",
+            "modified": "2024-03-09T02:46:30.129Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Default\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "0e99918c-78d1-403a-98ba-192dccc83504",
+            "colId": "29513284-6ee6-4427-8bde-64578617b3f3",
+            "containerId": "",
+            "name": "categoryPut",
+            "url": "http://localhost:3000/ventas/v1/category/65eb24d039a96e80e063137c",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-08T14:49:02.693Z",
+            "modified": "2024-03-09T02:11:58.187Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ropa\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "b1e85fe2-d905-473d-a117-cc1164b8e6ed",
+            "colId": "29513284-6ee6-4427-8bde-64578617b3f3",
+            "containerId": "",
+            "name": "categoryDelete",
+            "url": "http://localhost:3000/ventas/v1/category/65ebc91321b2f2023f8dc8b3",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-08T14:56:06.675Z",
+            "modified": "2024-03-09T02:46:52.635Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViM2U5ZDQwN2JiMWE0OGJmZDNiNjUiLCJpYXQiOjE3MDk5NTAyMDIsImV4cCI6MTcwOTk1MzgwMn0.cFDwjLHQSGNuepDnqfJAKeMUi7Ax22faD01xUEK_AvA"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        }
+    ]
+}

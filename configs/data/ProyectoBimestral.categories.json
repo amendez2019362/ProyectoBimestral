@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "65eb244f47570521163f8d0a"
+  },
+  "name": "Kinal",
+  "state": false
+},
+{
+  "_id": {
+    "$oid": "65eb24d039a96e80e063137c"
+  },
+  "name": "Ropa",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb409d5c7f43dbea702625"
+  },
+  "name": "Musica",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb40a55c7f43dbea702628"
+  },
+  "name": "Tecnologia",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb40ad5c7f43dbea70262b"
+  },
+  "name": "Articulos de deporte",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb40b35c7f43dbea70262e"
+  },
+  "name": "Libros",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc5371d49787c8e426769"
+  },
+  "name": "Alimentos",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc91321b2f2023f8dc8b3"
+  },
+  "name": "Tecnologia",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebcd6f118f716b0910bc46"
+  },
+  "name": "defaultCategory",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebcd86118f716b0910bc71"
+  },
+  "name": "Default",
+  "state": true,
+  "__v": 0
+}]

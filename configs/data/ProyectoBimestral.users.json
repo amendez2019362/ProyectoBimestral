@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "65eb252339a96e80e0631385"
+  },
+  "name": "Oscarito",
+  "lastName": "Morales",
+  "email": "oscar@gmail.com",
+  "password": "$2a$10$D3EzuhNI0Du0QHFfy6.NZ.fHhrTDja2ZUhMm.Oy3wEPJFnDgYDpnG",
+  "role": "CLIENT_ROLE",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb3e9d407bb1a48bfd3b65"
+  },
+  "name": "Angel",
+  "email": "Angel@gmail.com",
+  "password": "$2a$10$WbFK56QinZIi9s2ZJL54p.nU9msLkDLNZu4GigNhKzRdYq1GKF.ii",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb3ee2407bb1a48bfd3b70"
+  },
+  "name": "otto",
+  "email": "otto@gmail.com",
+  "password": "$2a$10$V.CHE8Zd8tUQyvEUEwAqlOuKIA0YJhOVQ5ZxIq4n5hKLnCEajvLIu",
+  "role": "CLIENT_ROLE",
+  "state": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65eb4d517b5bc15d50a1b404"
+  },
+  "name": "jose",
+  "email": "soto@gmail.com",
+  "password": "$2a$10$1Sxe3lr7RDRxhvh/NLT7Gu3gYkhvJR7eaGek3noEdtIiDRpCBeRPq",
+  "role": "CLIENT_ROLE",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc5081d49787c8e42675a"
+  },
+  "name": "elmer",
+  "email": "elmejor@gmail.com",
+  "password": "$2a$10$kx2pes8hoPiEbkhL7wclqeEIPRKRiewJ43n0Bw.wmSjNiWSGcO42e",
+  "role": "CLIENT_ROLE",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebfc5671b2c168aa6a10ef"
+  },
+  "name": "chino",
+  "email": "chino@gmail.com",
+  "password": "$2a$10$BU70Pk41RNa7AOlaFLOjP.yBkPUeD3gqiw/0BXG5z43HZ4fEGqJhG",
+  "role": "CLIENT_ROLE",
+  "state": true,
+  "__v": 0
+}]

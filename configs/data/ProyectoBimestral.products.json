@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "65ebc5c61d49787c8e426778"
+  },
+  "name": "Carne",
+  "price": 25,
+  "stock": 5,
+  "quantitySold": 137,
+  "state": true,
+  "category": {
+    "$oid": "65ebc5371d49787c8e426769"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc62b1d49787c8e426781"
+  },
+  "name": "Sopa",
+  "price": 10,
+  "stock": 15,
+  "quantitySold": 8,
+  "state": false,
+  "category": {
+    "$oid": "65ebc5371d49787c8e426769"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc63a1d49787c8e426784"
+  },
+  "name": "Pan",
+  "price": 2.2,
+  "stock": 0,
+  "quantitySold": 20,
+  "state": true,
+  "category": {
+    "$oid": "65ebc5371d49787c8e426769"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc76321b2f2023f8dc89c"
+  },
+  "name": "Fideos",
+  "price": 12.5,
+  "stock": 0,
+  "quantitySold": 8,
+  "state": true,
+  "category": {
+    "$oid": "65ebc5371d49787c8e426769"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc91e21b2f2023f8dc8b6"
+  },
+  "name": "Compu",
+  "price": 12.5,
+  "stock": 0,
+  "quantitySold": 8,
+  "state": true,
+  "category": {
+    "$oid": "65ebcd86118f716b0910bc71"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc92e21b2f2023f8dc8b9"
+  },
+  "name": "Teclado",
+  "price": 200,
+  "stock": 4,
+  "quantitySold": 10,
+  "state": true,
+  "category": {
+    "$oid": "65ebcd86118f716b0910bc71"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ebc94021b2f2023f8dc8bc"
+  },
+  "name": "Mause",
+  "price": 150,
+  "stock": 0,
+  "quantitySold": 4,
+  "state": true,
+  "category": {
+    "$oid": "65ebcd86118f716b0910bc71"
+  },
+  "__v": 0
+}]
