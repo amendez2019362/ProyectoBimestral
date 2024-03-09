@@ -8,14 +8,16 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js';
+import productRoutes from '../src/product/product.routes.js';
 class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-        
+
         this.userPath = '/ventas/v1/users';
         this.authPath = '/ventas/v1/auth';
         this.categoryPath = '/ventas/v1/category';
+        this.productPath = '/ventas/v1/product';
 
         this.middlewares();
         this.conectarDB();
@@ -34,10 +36,11 @@ class Server {
         this.app.use(morgan('dev'));
     }
 
-    routes(){
+    routes() {
         this.app.use(this.userPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
-        this.app.use(this.categoryPath, categoryRoutes)
+        this.app.use(this.categoryPath, categoryRoutes);
+        this.app.use(this.productPath, productRoutes);
     }
 
     listen() {

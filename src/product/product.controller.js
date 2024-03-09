@@ -18,10 +18,58 @@ export const productGet = async (req = request, res = response) => {
     });
 }
 
+export const getProductById = async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findOne({ _id: id });
+
+    res.status(200).json({
+        product
+    });
+}
+
+export const productPost = async (req, res) => {
+
+    const { name, price, stock, quantitySold, category } = req.body;
+    const product = new Product({ name, price, stock, quantitySold, category });
+
+    await product.save();
+
+    res.status(200).json({
+        product
+    });
+
+}
+
+export const productPut = async (req, res) => {
+
+    const { id } = req.params;
+    const { _id, state, ...rest } = req.body;
+
+    await Product.findByIdAndUpdate(id, rest);
+    const product = await Product.findOne({ _id: id });
+
+    res.status(200).json({
+        msg: 'Product Updated Successfully',
+        product
+    });
+}
+
+export const productDelete = async (req, res) => {
+    const { id } = req.params;
+
+    await Product.findByIdAndUpdate(id, { state: false });
+    const product = await Product.findOne({ _id: id });
+
+    res.status(200).json({
+        msg: 'Product Delete Successfully',
+        product
+    });
+}
+
 export const soldOutProduct = async (req, res) => {
     try {
 
-        const outOfStock = await Product.findProductSoldOut();
+        const outOfStock = await Product.findOutOfStockProducts();
 
         res.status(200).json({
             total: outOfStock.length,
@@ -48,50 +96,35 @@ export const getMaxSaleProduct = async (req, res) => {
     }
 }
 
-export const getProductById = async (req, res) => {
-    const { id } = req.params;
-    const product = await Product.findOne({ _id: id });
+export const searchNameProduct = async (req, res) => {
+    const { name } = req.params;
+    try {
 
-    res.status(200).json({
-        product
-    });
+        const products = await Product.find({ name: { $regex: new RegExp(name, 'i') } }).populate({ path: 'category', select: 'name -_id' });
+
+        res.status(200).json({
+            products
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }
 
-export const productsPost = async (req, res) => {
+export const searchCategoryProduct = async (req, res) => {
 
-    const { name, price, quantityStock, quantitySold, category } = req.body;
-    const product = new Product({ name, price, quantityStock, quantitySold, category });
+    const { categoryName } = req.params;
 
-    await product.save();
+    try {
+        const products = await Product.find({ category: categoryName }).populate({ path: 'category', select: 'name -_id' });
 
-    res.status(200).json({
-        product
-    });
+        res.status(200).json({
+            products
+        });
 
-}
-
-export const productsPut = async (req, res) => {
-
-    const { id } = req.params;
-    const { _id, state, ...rest } = req.body;
-
-    await Product.findByIdAndUpdate(id, rest);
-    const product = await Product.findOne({ _id: id });
-
-    res.status(200).json({
-        msg: 'Product Updated Successfully',
-        product
-    });
-}
-
-export const productDelete = async (req, res) => {
-    const { id } = req.params;
-
-    await Product.findByIdAndUpdate(id, { state: false });
-    const product = await Product.findOne({ _id: id });
-
-    res.status(200).json({
-        msg: 'Product Delete Successfully',
-        product
-    });
-}
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+};
