@@ -36,3 +36,10 @@ export const existProductById = async (id = '') => {
         throw new Error(`The ID: ${id} does not exist`);
     }
 }
+
+export const existCartById = async (id = '') => {
+    const existCart = await Cart.findById(id);
+    if(!existCart){
+        throw new Error(`The ID: ${id} does not exist`);
+    };
+}
